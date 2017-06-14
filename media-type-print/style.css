@@ -1,0 +1,48 @@
+body{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.table{
+	width: 100%;
+	margin-top: 20px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+
+.tabla-header,
+.tabla-body{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: auto;
+}
+
+.tabla-header{
+	background: grey;
+	color: white;
+}
+
+.col{
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.tabla-header .col{
+	text-align: center;
+}
+
+.tabla-body .col{
+	text-align: right;
+}
+
+@media print {
+	.tabla-header{
+		background: white;
+		color: black;
+	}
+
+	.logo{
+		display: none;
+	}
+}
